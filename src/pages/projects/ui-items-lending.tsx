@@ -38,7 +38,7 @@ export default function UiItemsLending() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="w-full relative min-h-[250px]">
-                  <Image src='/img/lending/lending-detail.png' fill className="object-cover rounded-3xl"></Image>
+                  <Image src='/img/lending/lending-detail.png' fill className="object-cover rounded-3xl" alt=""></Image>
               </div>
               <div className="w-full flex flex-col gap-4">
                 <div className="text-xs font-light border px-3 py-1 rounded-full w-fit">Mobile Design</div>
@@ -56,10 +56,10 @@ export default function UiItemsLending() {
           <div className="mb-10">
             <h1 className="text-2xl font-semibold mb-4">Mockup</h1>
             <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/lending/lending-mockup1.png' fill className="object-cover rounded-3xl"></Image>
+                <Image src='/img/lending/lending-mockup1.png' fill className="object-cover rounded-3xl" alt=""></Image>
             </div>
             <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/lending/lending-mockup2.png' fill className="object-cover rounded-3xl"></Image>
+                <Image src='/img/lending/lending-mockup2.png' fill className="object-cover rounded-3xl" alt=""></Image>
             </div>
           </div>
         </div>

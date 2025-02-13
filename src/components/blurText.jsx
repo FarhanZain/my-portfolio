@@ -1,26 +1,12 @@
 import { useRef, useEffect, useState } from 'react';
-import { useSprings, animated, SpringValue } from '@react-spring/web';
+import { useSprings, animated } from '@react-spring/web';
 
-interface BlurTextProps {
-  text?: string;
-  delay?: number;
-  className?: string;
-  animateBy?: 'words' | 'letters';
-  direction?: 'top' | 'bottom';
-  threshold?: number;
-  rootMargin?: string;
-  animationFrom?: Record<string, any>;
-  animationTo?: Record<string, any>[];
-  easing?: (t: number) => number | string;
-  onAnimationComplete?: () => void;
-}
-
-const BlurText: React.FC<BlurTextProps> = ({
+const BlurText = ({
   text = '',
   delay = 200,
   className = '',
-  animateBy = 'words',
-  direction = 'top',
+  animateBy = 'words', // 'words' or 'letters'
+  direction = 'top', // 'top' or 'bottom'
   threshold = 0.1,
   rootMargin = '0px',
   animationFrom,
@@ -30,15 +16,16 @@ const BlurText: React.FC<BlurTextProps> = ({
 }) => {
   const elements = animateBy === 'words' ? text.split(' ') : text.split('');
   const [inView, setInView] = useState(false);
-  const ref = useRef<HTMLParagraphElement>(null);
+  const ref = useRef();
   const animatedCount = useRef(0);
 
   // Default animations based on direction
-  const defaultFrom: Record<string, any> = direction === 'top'
-    ? { filter: 'blur(10px)', opacity: 0, transform: 'translate3d(0,-50px,0)' }
-    : { filter: 'blur(10px)', opacity: 0, transform: 'translate3d(0,50px,0)' };
-  
-  const defaultTo: Record<string, any>[] = [
+  const defaultFrom =
+    direction === 'top'
+      ? { filter: 'blur(10px)', opacity: 0, transform: 'translate3d(0,-50px,0)' }
+      : { filter: 'blur(10px)', opacity: 0, transform: 'translate3d(0,50px,0)' };
+
+  const defaultTo = [
     {
       filter: 'blur(5px)',
       opacity: 0.5,
@@ -52,17 +39,13 @@ const BlurText: React.FC<BlurTextProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
-          if (ref.current) {
-            observer.unobserve(ref.current);
-          }
+          observer.unobserve(ref.current);
         }
       },
       { threshold, rootMargin }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(ref.current);
 
     return () => observer.disconnect();
   }, [threshold, rootMargin]);
@@ -72,8 +55,8 @@ const BlurText: React.FC<BlurTextProps> = ({
     elements.map((_, i) => ({
       from: animationFrom || defaultFrom,
       to: inView
-        ? async (next: (arg: Record<string, SpringValue<any>>) => Promise<void>) => {
-          for (const step of animationTo || defaultTo) {
+        ? async (next) => {
+          for (const step of (animationTo || defaultTo)) {
             await next(step);
           }
           animatedCount.current += 1;
@@ -83,7 +66,7 @@ const BlurText: React.FC<BlurTextProps> = ({
         }
         : animationFrom || defaultFrom,
       delay: i * delay,
-      config: { easing: easing as any },
+      config: { easing },
     }))
   );
 

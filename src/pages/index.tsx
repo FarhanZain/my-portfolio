@@ -15,10 +15,10 @@ import {
 import SpotlightCard from "@/components/spotlightCard";
 import RegularCard from "@/components/regularCard";
 import Image from "next/image";
-import BlurText from "@/components/blurText";
 import RotatingText from "@/components/rotatingText";
 import AnimatedContent from "@/components/animatedContent";
 import Head from "next/head";
+import BlurText from "@/components/blurText";
 
 export default function Home() {
   const links = [
@@ -72,13 +72,12 @@ export default function Home() {
             <RegularCard className="p-8 w-full">
               <div className="flex gap-3 sm:gap-4">
                 <BlurText
-                  text="Hi, i'm Farhan"
-                  delay={150}
-                  animateBy="words"
-                  direction="bottom"
-                  onAnimationComplete={handleAnimationComplete}
-                  className="text-xl sm:text-2xl font-semibold mb-3"
-                />
+                    text="Hi, i'm Farhan"
+                    delay={150}
+                    animateBy="words"
+                    direction="bottom"
+                    onAnimationComplete={handleAnimationComplete}
+                    className="text-xl sm:text-2xl font-semibold mb-3" animationFrom={undefined} animationTo={undefined}                />
                 <div>
                   <RotatingText
                     texts={['UI/UX Designer', 'UI/UX Designer']}
@@ -147,7 +146,7 @@ export default function Home() {
                 delay={400}
               >
                 <RegularCard className="h-[210px] w-full relative cursor-pointer" href="about">
-                  <Image src='/img/newpp.png' fill className="object-cover"></Image>
+                  <Image src='/img/newpp.png' fill className="object-cover" alt=""></Image>
                   <div className="absolute top-0 right-0 me-1 mt-1">
                     <IconCircleArrowUpRight size={32} stroke={1}/>
                   </div>
@@ -215,7 +214,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="w-full relative">
-                    <Image src='/img/pm-thumbnail.png' fill className="object-cover"></Image>
+                    <Image src='/img/pm-thumbnail.png' fill className="object-cover" alt=""></Image>
                   </div>
                 </div>
               </SpotlightCard>
@@ -249,7 +248,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="w-full relative">
-                    <Image src='/img/redesign-thumbnail.png' fill className="object-cover"></Image>
+                    <Image src='/img/redesign-thumbnail.png' fill className="object-cover" alt=""></Image>
                   </div>
                 </div>
               </SpotlightCard>
@@ -280,7 +279,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="w-full relative">
-                    <Image src='/img/summary-thumbnail.png' fill className="object-cover"></Image>
+                    <Image src='/img/summary-thumbnail.png' fill className="object-cover" alt=""></Image>
                   </div>
                 </div>
               </SpotlightCard>

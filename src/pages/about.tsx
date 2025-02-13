@@ -75,7 +75,7 @@ export default function About() {
             >
               <div className="h-full">
                 <RegularCard className=" h-[250px] sm:h-full min-w-[250px] relative">
-                  <Image src='/img/aboutpp.png' fill className="object-cover"></Image>
+                  <Image src='/img/aboutpp.png' fill className="object-cover" alt=""></Image>
                 </RegularCard>
               </div>
             </AnimatedContent>
@@ -98,10 +98,10 @@ export default function About() {
                   <p className="font-semibold mb-3">Tools</p>
                   <div className="flex gap-3">
                     <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/figma.png' width={40} height={40}></Image>
+                      <Image src='/img/figma.png' width={40} height={40} alt=""></Image>
                     </div>
                     <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/vscode.png' width={40} height={40}></Image>
+                      <Image src='/img/vscode.png' width={40} height={40} alt=""></Image>
                     </div>
                   </div>
                 </RegularCard>
@@ -123,22 +123,22 @@ export default function About() {
                   <p className="font-semibold mb-3">Tech Stack</p>
                   <div className="flex flex-wrap gap-3">
                     <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/html.png' width={40} height={40}></Image>
+                      <Image src='/img/html.png' width={40} height={40} alt=""></Image>
                     </div>
                     <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/css.png' width={40} height={40}></Image>
+                      <Image src='/img/css.png' width={40} height={40} alt=""></Image>
                     </div>
                     <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/js.png' width={40} height={40}></Image>
+                      <Image src='/img/js.png' width={40} height={40} alt=""></Image>
                     </div>
                     <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/bootstrap.png' width={40} height={40}></Image>
+                      <Image src='/img/bootstrap.png' width={40} height={40} alt=""></Image>
                     </div>
                     <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/tailwind.png' width={40} height={40}></Image>
+                      <Image src='/img/tailwind.png' width={40} height={40} alt=""></Image>
                     </div>
                     <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/react.png' width={40} height={40}></Image>
+                      <Image src='/img/react.png' width={40} height={40} alt=""></Image>
                     </div>
                   </div>
                 </RegularCard>
@@ -224,16 +224,16 @@ export default function About() {
                 <p className="font-semibold text-center mb-4">Journey</p>
                 <div className="flex flex-wrap sm:flex-nowrap gap-3">
                   <RegularCard className="h-[200px] sm:h-[140px] lg:h-[170px] w-full relative">
-                    <Image src='/img/sat2.jpeg' fill className="object-cover"></Image>
+                    <Image src='/img/sat2.jpeg' fill className="object-cover" alt=""></Image>
                   </RegularCard>
                   <RegularCard className="h-[200px] sm:h-[140px] lg:h-[170px] w-full relative">
-                    <Image src='/img/sat1.jpeg' fill className="object-cover"></Image>
+                    <Image src='/img/sat1.jpeg' fill className="object-cover" alt=""></Image>
                   </RegularCard>
                   <RegularCard className="h-[200px] sm:h-[140px] lg:h-[170px] w-full relative">
-                    <Image src='/img/il2.jpeg' fill className="object-cover"></Image>
+                    <Image src='/img/il2.jpeg' fill className="object-cover" alt=""></Image>
                   </RegularCard>
                   <RegularCard className="h-[200px] sm:h-[140px] lg:h-[170px] w-full relative">
-                    <Image src='/img/il1.jpeg' fill className="object-cover"></Image>
+                    <Image src='/img/il1.jpeg' fill className="object-cover" alt=""></Image>
                   </RegularCard>
                 </div>
               </RegularCard>

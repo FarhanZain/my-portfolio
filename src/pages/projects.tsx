@@ -86,7 +86,7 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="w-full relative">
-                    <Image src='/img/pm-thumbnail.png' fill className="object-cover"></Image>
+                    <Image src='/img/pm-thumbnail.png' fill className="object-cover" alt=""></Image>
                   </div>
                 </div>
               </SpotlightCard>
@@ -117,7 +117,7 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="w-full relative">
-                    <Image src='/img/redesign-thumbnail.png' fill className="object-cover"></Image>
+                    <Image src='/img/redesign-thumbnail.png' fill className="object-cover" alt=""></Image>
                   </div>
                 </div>
               </SpotlightCard>
@@ -148,7 +148,7 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="w-full relative">
-                    <Image src='/img/summary-thumbnail.png' fill className="object-cover"></Image>
+                    <Image src='/img/summary-thumbnail.png' fill className="object-cover" alt=""></Image>
                   </div>
                 </div>
               </SpotlightCard>
@@ -179,7 +179,7 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="w-full relative">
-                    <Image src='/img/snorkeling-thumbnail.png' fill className="object-cover"></Image>
+                    <Image src='/img/snorkeling-thumbnail.png' fill className="object-cover" alt=""></Image>
                   </div>
                 </div>
               </SpotlightCard>
@@ -210,7 +210,7 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="w-full relative">
-                    <Image src='/img/lending-thumbnail.png' fill className="object-cover"></Image>
+                    <Image src='/img/lending-thumbnail.png' fill className="object-cover" alt=""></Image>
                   </div>
                 </div>
               </SpotlightCard>
@@ -241,7 +241,7 @@ export default function Projects() {
                     </div>
                   </div>
                   <div className="w-full relative">
-                    <Image src='/img/tracer-thumbnail.png' fill className="object-cover"></Image>
+                    <Image src='/img/tracer-thumbnail.png' fill className="object-cover" alt=""></Image>
                   </div>
                 </div>
               </SpotlightCard>
