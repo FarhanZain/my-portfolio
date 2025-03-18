@@ -19,6 +19,7 @@ import RotatingText from "@/components/rotatingText";
 import AnimatedContent from "@/components/animatedContent";
 import Head from "next/head";
 import BlurText from "@/components/blurText";
+import CircularText from "@/components/circularText";
 
 export default function Home() {
   const links = [
@@ -80,7 +81,7 @@ export default function Home() {
                     className="text-xl sm:text-2xl font-semibold mb-3" animationFrom={undefined} animationTo={undefined}                />
                 <div>
                   <RotatingText
-                    texts={['UI/UX Designer', 'UI/UX Designer']}
+                    texts={['UI/UX Designer', 'Web Designer']}
                     mainClassName="px-2 sm:px-2 md:px-3 bg-white text-black text-sm sm:text-xl font-bold sm:font-semibold overflow-hidden items-center justify-center rounded-md sm:rounded-lg mt-1 sm:mt-0"
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
@@ -148,7 +149,7 @@ export default function Home() {
                 <RegularCard className="h-[210px] w-full relative cursor-pointer" href="about">
                   <Image src='/img/newpp.png' fill className="object-cover" alt=""></Image>
                   <div className="absolute top-0 right-0 me-1 mt-1">
-                    <IconCircleArrowUpRight size={32} stroke={1}/>
+                    <IconCircleArrowUpRight size={36} stroke={1}/>
                   </div>
                   <div className="absolute bottom-0 pb-2 px-2 w-full">
                     <div className="flex items-center gap-2 px-3 py-2 bg-white bg-opacity-60 rounded-full">
@@ -178,13 +179,15 @@ export default function Home() {
                 threshold={0.2}
                 delay={600}
               >
-                <SpotlightCard href="projects" className="p-5 sm:p-8 w-full h-[210px]">
-                  <div className="h-full flex items-end">
-                    <div className="flex items-center justify-between w-full">
-                      <p className="text-base sm:text-lg font-semibold">See All Project</p>
-                      <IconArrowNarrowRight/>
-                    </div>
-                  </div>
+                <SpotlightCard href="projects" className="p-7 w-full h-[210px] relative">
+                  <CircularText
+                    text="SEE-ALL-PROJECT-"
+                    onHover="speedUp"
+                    spinDuration={20}
+                    className="custom-class"
+                  />
+                  <IconCircleArrowRight stroke={1} size={36} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                  {/* <IconArrowNarrowRight/> */}
                 </SpotlightCard>
               </AnimatedContent>
             </div>
