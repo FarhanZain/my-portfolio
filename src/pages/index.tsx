@@ -1,12 +1,12 @@
 import React from "react";
 import { FloatingDock } from "@/components/floating-dock";
 import {
-  IconArrowNarrowRight,
   IconBrandDribbble,
   IconBrandGithub,
+  IconBrandInstagram,
   IconBrandLinkedin,
+  IconBrandWhatsapp,
   IconCircleArrowRight,
-  IconCircleArrowUpRight,
   IconFolderOpen,
   IconMail ,
   IconSmartHome,
@@ -20,8 +20,12 @@ import AnimatedContent from "@/components/animatedContent";
 import Head from "next/head";
 import BlurText from "@/components/blurText";
 import CircularText from "@/components/circularText";
+import Stack from "@/components/stack";
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router = useRouter()
+
   const links = [
     {
       title: "Home",
@@ -49,6 +53,14 @@ export default function Home() {
   const handleAnimationComplete = () => {
     console.log('Animation completed!');
   };
+
+  const images = [
+    { id: 1, img: "/img/stack/stack5.jpg" },
+    { id: 2, img: "/img/stack/stack4.jpg" },
+    { id: 3, img: "/img/stack/stack3.jpg" },
+    { id: 4, img: "/img/stack/stack2.jpg" },
+    { id: 5, img: "/img/stack/stack1.jpg" }
+  ];
 
   return (
     <div className="container mx-auto p-4 flex flex-col items-center sm:justify-center h-screen w-full">
@@ -82,7 +94,7 @@ export default function Home() {
                 <div>
                   <RotatingText
                     texts={['UI/UX Designer', 'Web Designer']}
-                    mainClassName="px-2 sm:px-2 md:px-3 bg-white text-black text-sm sm:text-xl font-bold sm:font-semibold overflow-hidden items-center justify-center rounded-md sm:rounded-lg mt-1 sm:mt-0"
+                    mainClassName="px-2 sm:px-2 md:px-3 bg-white text-black text-base sm:text-xl font-bold sm:font-semibold overflow-hidden items-center justify-center rounded-md sm:rounded-lg mt-1 sm:mt-0"
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
@@ -110,23 +122,27 @@ export default function Home() {
           delay={200}
         >
           <div>
-            <div className="flex flex-row sm:flex-col gap-3">
-              <div className="flex gap-3 w-full">
-                <SpotlightCard href="mailto:farhanabdurrahmanzain@gmail.com" className="min-w-[74px] w-full min-h-[80px] sm:min-h-[74px] flex items-center justify-center">
+            <div className="flex flex-wrap justify-center sm:justify-between gap-3 w-full sm:w-[246px]">
+                <SpotlightCard href="mailto:farhanabdurrahmanzain@gmail.com" className="w-[74px] h-[74px] flex items-center justify-center">
                   <IconMail size={24}/>
                 </SpotlightCard>
-                <SpotlightCard link="https://www.linkedin.com/in/farhan-abdurrahman-zain/" className="min-w-[74px] w-full min-h-[80px] sm:min-h-[74px] flex items-center justify-center">
+                <SpotlightCard link="https://www.linkedin.com/in/farhan-abdurrahman-zain/" className="w-[74px] h-[74px] flex items-center justify-center">
                   <IconBrandLinkedin size={24}/>
                 </SpotlightCard>
-              </div>
-              <div className="flex gap-3 w-full">
-                <SpotlightCard link="https://dribbble.com/FarhanZain26" className="min-w-[74px] w-full min-h-[80px] sm:min-h-[74px] flex items-center justify-center">
+                <SpotlightCard link="https://dribbble.com/FarhanZain26" className="w-[74px] h-[74px] flex items-center justify-center">
                   <IconBrandDribbble size={24}/>
                 </SpotlightCard>
-                <SpotlightCard link="https://github.com/FarhanZain" className="min-w-[74px] w-full min-h-[80px] sm:min-h-[74px] flex items-center justify-center">
+                <div className="w-[74px] h-[74px] block sm:hidden"></div>
+                <div className="w-[74px] h-[74px] block sm:hidden"></div>
+                <SpotlightCard link="https://github.com/FarhanZain" className="w-[74px] h-[74px] flex items-center justify-center">
                   <IconBrandGithub size={24}/>
                 </SpotlightCard>
-              </div>
+                <SpotlightCard link="https://www.instagram.com/farhanzainnn_/" className="w-[74px] h-[74px] flex items-center justify-center">
+                  <IconBrandInstagram size={24}/>
+                </SpotlightCard>
+                <SpotlightCard link="http://wa.me/6285293472288" className="w-[74px] h-[74px] flex items-center justify-center">
+                  <IconBrandWhatsapp size={24}/>
+                </SpotlightCard>
             </div>
           </div>
         </AnimatedContent>
@@ -146,12 +162,16 @@ export default function Home() {
                 threshold={0.2}
                 delay={400}
               >
-                <RegularCard className="h-[210px] w-full relative cursor-pointer" href="about">
-                  <Image src='/img/newpp.png' fill className="object-cover" alt=""></Image>
-                  <div className="absolute top-0 right-0 me-1 mt-1">
-                    <IconCircleArrowUpRight size={36} stroke={1}/>
-                  </div>
-                  <div className="absolute bottom-0 pb-2 px-2 w-full">
+                <div className="h-[210px] w-full relative cursor-pointer p-0" onClick={() => router.push("about")}>
+                  {/* <Image src='/img/newpp.png' fill className="object-cover" alt=""></Image> */}
+                  <Stack
+                    randomRotation={false}
+                    sensitivity={180}
+                    sendToBackOnClick={false}
+                    cardDimensions={{ height: 210 }}
+                    cardsData={images}
+                  />
+                  <div className="absolute bottom-0 pb-2 px-2 sm:pe-10 w-full">
                     <div className="flex items-center gap-2 px-3 py-2 bg-white bg-opacity-60 rounded-full">
                       <div className="relative flex h-5 w-5 items-center justify-center">
                         <span
@@ -164,7 +184,7 @@ export default function Home() {
                       <p className="text-black font-semibold">Open to work</p>
                     </div>
                   </div>
-                </RegularCard>
+                </div>
               </AnimatedContent>
             </div>
             <div className="w-full">
@@ -225,7 +245,7 @@ export default function Home() {
           </div>
         </div>
         {/* Section 3 */}
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col pb-4 sm:pb-0 sm:flex-row gap-3">
           <div className="w-full">
             <AnimatedContent
               distance={150}

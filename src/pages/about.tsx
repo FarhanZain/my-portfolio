@@ -9,6 +9,7 @@ import RegularCard from "@/components/regularCard";
 import Image from "next/image";
 import AnimatedContent from "@/components/animatedContent";
 import Head from "next/head";
+import Stack from "@/components/stack";
 
 export default function About() {
   const links = [
@@ -33,6 +34,14 @@ export default function About() {
       ),
       href: "projects",
     },
+  ];
+
+  const images = [
+    { id: 1, img: "/img/stack/stack5.jpg" },
+    { id: 2, img: "/img/stack/stack4.jpg" },
+    { id: 3, img: "/img/stack/stack3.jpg" },
+    { id: 4, img: "/img/stack/stack2.jpg" },
+    { id: 5, img: "/img/stack/stack1.jpg" }
   ];
 
   return (
@@ -74,9 +83,16 @@ export default function About() {
               delay={200}
             >
               <div className="h-full">
-                <RegularCard className=" h-[250px] sm:h-full min-w-[250px] relative">
-                  <Image src='/img/aboutpp.png' fill className="object-cover" alt=""></Image>
-                </RegularCard>
+                <div className=" h-[210px] sm:h-full min-w-[250px] relative">
+                  {/* <Image src='/img/aboutpp.png' fill className="object-cover" alt=""></Image> */}
+                  <Stack
+                    randomRotation={false}
+                    sensitivity={180}
+                    sendToBackOnClick={false}
+                    cardDimensions={{ height: 210 }}
+                    cardsData={images}
+                  />
+                </div>
               </div>
             </AnimatedContent>
           </div>
