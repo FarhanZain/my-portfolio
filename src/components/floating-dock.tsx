@@ -70,7 +70,7 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="h-14 w-14 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
+                  className="h-14 w-14 rounded-full bg-neutral-900 flex items-center justify-center"
                 >
                   <div className="h-6 w-6">{item.icon}</div>
                 </Link>
@@ -81,9 +81,9 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-14 w-14 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
+        className="h-14 w-14 rounded-full bg-neutral-800 flex items-center justify-center"
       >
-        <IconLayoutNavbarCollapse className="h-6 w-6 text-neutral-500 dark:text-neutral-400" />
+        <IconLayoutNavbarCollapse className="h-6 w-6 text-neutral-300" />
       </button>
     </div>
   );
@@ -102,7 +102,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseY.set(e.pageY)}
       onMouseLeave={() => mouseY.set(Infinity)}
       className={cn(
-        "mx-auto hidden lg:flex flex-col h-auto gap-4 items-center rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 py-3",
+        "mx-auto hidden lg:flex flex-col h-auto gap-4 items-center rounded-2xl bg-neutral-900 px-4 py-3",
         className
       )}
     >
@@ -168,7 +168,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"
+        className="aspect-square rounded-full bg-neutral-800 flex items-center justify-center relative"
       >
         <AnimatePresence>
           {hovered && (
@@ -176,7 +176,7 @@ function IconContainer({
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 10 }}
-              className="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-24 w-fit text-xs"
+              className="px-2 py-0.5 whitespace-pre rounded-md bg-neutral-800 border-neutral-900 text-white absolute left-24 w-fit text-xs"
             >
               {title}
             </motion.div>

@@ -30,16 +30,17 @@ export default function ProjectSummary() {
         <Head>
           <title>Project Summary Mobile</title>
         </Head>
-        <div className="w-full max-w-[800px]">
+        <div className="w-full max-w-[1000px]">
           {/* Hero */}
           <div className="flex gap-1 items-center mb-4 cursor-pointer" onClick={handleClick}>
             <IconChevronLeft stroke={1} />
             <p>Back</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="w-full relative min-h-[250px]">
-                  <Image src='/img/summary/summary-detail.png' fill className="object-cover rounded-3xl" alt=""></Image>
-              </div>
+              <img
+                src="/img/summary/summary-detail.png"
+                className="w-full h-auto rounded-xl"
+              />
               <div className="w-full flex flex-col gap-4">
                 <div className="text-xs font-light border px-3 py-1 rounded-full w-fit">Mobile Design</div>
                 <h1 className="text-3xl font-semibold">Project Summary Mobile</h1>
@@ -84,34 +85,36 @@ export default function ProjectSummary() {
           {/* User Flow */}
           <div className="mb-10">
             <h1 className="text-2xl font-semibold mb-4">User Flow</h1>
-            <div className="w-full relative min-h-[250px] sm:min-h-[500px]">
-                <Image src='/img/summary/summary-userflow.png' fill className="object-cover rounded-3xl" alt=""></Image>
-            </div>
-          </div>
-          {/* Testing (how we do testing = design review) */}
-          <div className="mb-10">
-            <h1 className="text-2xl font-semibold mb-3">Design Review</h1>
-            <p>We did a design presentation with stakeholders to get approval or feedback. we did not do usability testing because the time available was very limited.</p>
+            <img
+                src="/img/summary/summary-userflow.png"
+                className="w-full h-auto rounded-xl mt-6"
+              />
           </div>
           {/* Wireframe */}
           <div className="mb-10">
             <h1 className="text-2xl font-semibold mb-4">Wireframe</h1>
-            <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/summary/summary-wireframe1.png' fill className="object-cover rounded-3xl" alt=""></Image>
-            </div>
-            <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/summary/summary-wireframe2.png' fill className="object-cover rounded-3xl" alt=""></Image>
-            </div>
+            <img
+                src="/img/summary/summary-wireframe.png"
+                className="w-full h-auto rounded-xl mt-6"
+              />
           </div>
           {/* Mockup */}
           <div className="mb-10">
-            <h1 className="text-2xl font-semibold mb-4">Mockup</h1>
-            <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/summary/summary-mockup1.png' fill className="object-cover rounded-3xl" alt=""></Image>
-            </div>
-            <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/summary/summary-mockup2.png' fill className="object-cover rounded-3xl" alt=""></Image>
-            </div>
+            <h1 className="text-2xl font-semibold mb-4">High Fidelity Design</h1>
+            <img
+                src="/img/summary/summary-mockup.png"
+                className="w-full h-auto rounded-xl mt-6"
+              />
+          </div>
+          {/* Prototyping */}
+          <div className="mb-10">
+            <h1 className="text-2xl font-semibold mb-3">Prototyping</h1>
+            <p>We made advance prototyping using variables in figma, but sorry I can't show it here.</p>
+          </div>
+          {/* Testing (how we do testing = design review) */}
+          <div className="mb-40">
+            <h1 className="text-2xl font-semibold mb-3">Testing</h1>
+            <p>No testing documentation. We did a design presentation with stakeholders to get approval or feedback. we did not do usability testing because the time available was very limited.</p>
           </div>
         </div>
       </div>

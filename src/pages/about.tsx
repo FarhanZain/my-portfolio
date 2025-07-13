@@ -16,21 +16,21 @@ export default function About() {
     {
       title: "Home",
       icon: (
-        <IconSmartHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconSmartHome className="h-full w-full text-neutral-300" />
       ),
       href: "/",
     },
     {
       title: "About",
       icon: (
-        <IconUserCircle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconUserCircle className="h-full w-full text-neutral-300" />
       ),
       href: "about",
     },
     {
       title: "Project",
       icon: (
-        <IconFolderOpen className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconFolderOpen className="h-full w-full text-neutral-300" />
       ),
       href: "projects",
     },
@@ -43,6 +43,17 @@ export default function About() {
     { id: 4, img: "/img/stack/stack2.jpg" },
     { id: 5, img: "/img/stack/stack1.jpg" }
   ];
+
+  const techs = [
+    {img: '/img/html.png'},
+    {img: '/img/css.png'},
+    {img: '/img/bootstrap.png'},
+    {img: '/img/tailwind.png'},
+    {img: '/img/js.png'},
+    {img: '/img/typescript.png'},
+    {img: '/img/react.png'},
+    {img: '/img/nextjs.png'},
+  ]
 
   return (
     <>
@@ -65,9 +76,9 @@ export default function About() {
               delay={0}
             >
               <div className="h-full">
-                <RegularCard className="p-8 w-full h-full">
+                <RegularCard className="p-8 lg:p-5 2xl:p-8 w-full h-full">
                   <p className="text-xl mb-2 font-semibold">About</p>
-                  <p>Fresh graduate from the Informatics Engineering program at Batam State Polytechnic. Skilled in UI/UX Design and Frontend Web Development. Has one year of experience as an UI/UX Designer intern. Able to work both independently and in a team, diligent in completing tasks, and always strives to deliver the best results in every project undertaken.</p>
+                  <p>Informatics Engineering graduate from Batam State Polytechnic. Skilled in UI/UX Design and Frontend Web Development. Has one year of experience as an UI/UX Engineer intern. Able to work both independently and in a team, diligent in completing tasks, and always strives to deliver the best results in every project undertaken.</p>
                 </RegularCard>
               </div>
             </AnimatedContent>
@@ -80,11 +91,10 @@ export default function About() {
               animateOpacity
               scale={1.0}
               threshold={0.2}
-              delay={200}
+              delay={50}
             >
               <div className="h-full">
                 <div className=" h-[210px] sm:h-full min-w-[250px] relative">
-                  {/* <Image src='/img/aboutpp.png' fill className="object-cover" alt=""></Image> */}
                   <Stack
                     randomRotation={false}
                     sensitivity={180}
@@ -108,9 +118,9 @@ export default function About() {
                 animateOpacity
                 scale={1.0}
                 threshold={0.2}
-                delay={400}
+                delay={150}
               >
-                <RegularCard className="p-8 w-full h-auto">
+                <RegularCard className="p-8 lg:p-5 2xl:p-8 w-full h-auto">
                   <p className="font-semibold mb-3">Tools</p>
                   <div className="flex gap-3">
                     <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
@@ -133,29 +143,16 @@ export default function About() {
                 animateOpacity
                 scale={1.0}
                 threshold={0.2}
-                delay={600}
+                delay={200}
               >
-                <RegularCard className="p-8 w-full h-auto">
+                <RegularCard className="p-8 lg:p-5 2xl:p-8 w-full h-auto">
                   <p className="font-semibold mb-3">Tech Stack</p>
                   <div className="flex flex-wrap gap-3">
-                    <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/html.png' width={40} height={40} alt=""></Image>
-                    </div>
-                    <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/css.png' width={40} height={40} alt=""></Image>
-                    </div>
-                    <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/js.png' width={40} height={40} alt=""></Image>
-                    </div>
-                    <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/bootstrap.png' width={40} height={40} alt=""></Image>
-                    </div>
-                    <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/tailwind.png' width={40} height={40} alt=""></Image>
-                    </div>
-                    <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl">
-                      <Image src='/img/react.png' width={40} height={40} alt=""></Image>
-                    </div>
+                    {techs.map((tech, i)=>(
+                      <div className="w-[60px] h-[60px] flex items-center justify-center border border-[#222222] rounded-xl" key={i}>
+                        <Image src={tech.img} width={40} height={40} alt=""></Image>
+                      </div>
+                    ))}
                   </div>
                 </RegularCard>
               </AnimatedContent>
@@ -173,22 +170,22 @@ export default function About() {
                 animateOpacity
                 scale={1.0}
                 threshold={0.2}
-                delay={800}
+                delay={250}
               >
-                <RegularCard className="p-8 w-full h-auto sm:min-h-[220px]">
+                <RegularCard className="p-8 lg:p-5 2xl:p-8 w-full h-auto sm:min-h-[220px]">
                   <p className="font-semibold mb-3">Experince</p>
                   <div>
-                    <div className="mb-3">
-                      <div className="flex items-center justify-between mb-1">
-                        <p className="text-lg font-medium">UI/UX Designer Intern</p>
-                        <p className="font-light text-zinc-500">Aug 23 - Aug 24</p>
+                    <div className="mb-6 sm:mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                        <p className="text-lg font-medium order-2 sm:order-1">UI/UX Engineer Intern</p>
+                        <p className="font-light text-zinc-500 order-1 sm:order-2">Aug 23 - Aug 24</p>
                       </div>
                       <p className="text-sm font-light text-zinc-300">PT Sat Nusapersada Tbk</p>
                     </div>
                     <div>
-                      <div className="flex items-center justify-between mb-1">
-                        <p className="text-lg font-medium">Web Development Student</p>
-                        <p className="font-light text-zinc-500">Feb 23 - Jun 23</p>
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                        <p className="text-lg font-medium order-2 sm:order-1">Web Development Student</p>
+                        <p className="font-light text-zinc-500 order-1 sm:order-2">Feb 23 - Jun 23</p>
                       </div>
                       <p className="text-sm font-light text-zinc-300">Infinite Learning Indonesia</p>
                     </div>
@@ -206,9 +203,9 @@ export default function About() {
                 animateOpacity
                 scale={1.0}
                 threshold={0.2}
-                delay={1000}
+                delay={300}
               >
-                <RegularCard className="p-8 w-full h-auto sm:min-h-[246px] lg:min-h-[220px]">
+                <RegularCard className="p-8 lg:p-5 2xl:p-8 w-full h-auto sm:min-h-[246px] lg:min-h-[220px]">
                   <p className="font-semibold mb-3">Education</p>
                   <div>
                     <div className="mb-3">
@@ -234,9 +231,9 @@ export default function About() {
               animateOpacity
               scale={1.0}
               threshold={0.2}
-              delay={1200}
+              delay={350}
             >
-              <RegularCard className="p-8 w-full h-auto">
+              <RegularCard className="p-8 lg:p-5 2xl:p-8 w-full h-auto">
                 <p className="font-semibold text-center mb-4">Journey</p>
                 <div className="flex flex-wrap sm:flex-nowrap gap-3">
                   <RegularCard className="h-[200px] sm:h-[140px] lg:h-[170px] w-full relative">

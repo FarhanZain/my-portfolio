@@ -37,9 +37,10 @@ export default function RedesignMysatnusa() {
             <p>Back</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="w-full relative min-h-[250px]">
-                  <Image src='/img/redesign/redesign-detail.png' fill className="object-cover rounded-3xl" alt=""></Image>
-              </div>
+              <img
+                src="/img/redesign/redesign-detail.png"
+                className="w-full h-auto rounded-xl"
+              />
               <div className="w-full flex flex-col gap-4">
                 <div className="text-xs font-light border px-3 py-1 rounded-full w-fit">Mobile Design</div>
                 <h1 className="text-3xl font-semibold">Redesign Mysatnusa App</h1>
@@ -62,30 +63,39 @@ export default function RedesignMysatnusa() {
               </div>
             </div>
           </div>
-          {/* Testing (how we do testing = design review) */}
+          {/* User Requirement (interview) */}
           <div className="mb-10">
-            <h1 className="text-2xl font-semibold mb-3">Design Review</h1>
-            <p>We did a design presentation with stakeholders to get approval or feedback. we did not do usability testing because the time available was very limited.</p>
+            <h1 className="text-2xl font-semibold mb-3">User Requirement</h1>
+            <img
+                src="/img/redesign/redesign-requirement.png"
+                className="w-full h-auto rounded-xl mt-6"
+              />
           </div>
           {/* Wireframe */}
           <div className="mb-10">
             <h1 className="text-2xl font-semibold mb-4">Wireframe</h1>
-            <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/redesign/redesign-wireframe1.png' fill className="object-cover rounded-3xl" alt=""></Image>
-            </div>
-            <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/redesign/redesign-wireframe2.png' fill className="object-cover rounded-3xl" alt=""></Image>
-            </div>
+            <img
+                src="/img/redesign/redesign-wireframe.png"
+                className="w-full h-auto rounded-xl mt-6"
+              />
           </div>
           {/* Mockup */}
           <div className="mb-10">
             <h1 className="text-2xl font-semibold mb-4">Mockup</h1>
-            <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/redesign/redesign-mockup1.png' fill className="object-cover rounded-3xl" alt=""></Image>
-            </div>
-            <div className="w-full relative min-h-[250px] sm:min-h-[500px] mb-4">
-                <Image src='/img/redesign/redesign-mockup2.png' fill className="object-cover rounded-3xl" alt=""></Image>
-            </div>
+            <img
+                src="/img/redesign/redesign-mockup.png"
+                className="w-full h-auto rounded-xl mt-6"
+              />
+          </div>
+          {/* Prototyping */}
+          <div className="mb-10">
+            <h1 className="text-2xl font-semibold mb-3">Prototyping</h1>
+            <p>We made advance prototyping using variables in figma, but sorry I can't show it here.</p>
+          </div>
+          {/* Testing (how we do testing = design review) */}
+          <div className="mb-40">
+            <h1 className="text-2xl font-semibold mb-3">Testing</h1>
+            <p>No testing documentation. We did a design presentation with stakeholders to get approval or feedback. we did not do usability testing because the time available was very limited.</p>
           </div>
         </div>
       </div>
